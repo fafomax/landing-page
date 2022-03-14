@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+:root {
+    --navbar-bg-color: #455d6d;
+    --navbar-text-color: #98b5c9;
+    --navbar-text-color-focus: #ffffff;
+    --navbar-bg-contrast: #A0CCE7;
+    --bg-text: RGBA(27,45,56,0.9);
+    --text-card: #ffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body {
+    line-height: 1.5;
+    font-family: 'PT Sans', sans-serif;
+    background-image: linear-gradient(to bottom right, #4affde 0%, #5b9dff 40%, #d06bff 60%, #ff34d2 100%);
+    background-size: 200% 200%;
+    animation: movingGradiente 30s linear infinite alternate;
+}
+
+@keyframes movingGradiente {
+    from { background-position: 0 0; }
+    to { background-position: 100% 100%; }
+}
+/*Navbar*/
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.align-items-center{
+	align-items: center;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+
+.nombreLogo{
+    font-size: 4em;
+}
+
+
+  /*header*/
+.header{
+    background-color: var(--navbar-bg-color);
+    position: relative;
+}
+  .header .logo,
+  .header .nav{
+      padding:0 15px;
+  }
+  .header .logo a{
+      font-size: 5px;
+      color: var(--navbar-text-color-focus);
+      text-transform: capitalize;
+  }
+  .header .nav ul li{
+      display: inline-block;
+      margin-left: 40px;
+  }
+  .header .nav ul li a{
+      display: block;
+      font-size: 20px;
+      padding: 15px;
+      color: var(--navbar-text-color);
+      text-transform: capitalize;
+      transition: all 0.5s ease;
+  }
+  .header .nav ul li a:hover,
+  .header .nav ul li a.active{
+      color: var(--navbar-text-color-focus);
+  }
+  .header #nav-check{
+      position: absolute;
+      opacity:0;
+      pointer-events: none;
+  }
+  .nav-toggler{
+      height: 34px;
+      width: 44px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+  }
+  .nav-toggler span{
+      display: block;
+      height: 2px;
+      width: 20px;
+      background-color: var(--bg-text);
+      position: relative;
+  }
+  .nav-toggler span::before,
+  .nav-toggler span::after{
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: var(--bg-text);
+     left:0;
+  }
+.nav-toggler span::before{
+    top: -6px;
+}
+.nav-toggler span::after{
+    top: 6px;
+}
+/*Fin de Navbar*/
+
+.pc-logo{
+    width: 20%;
+    margin-right: 0.5em;
+}
+.card-content{
+    margin-top: 10px;
+    background-color: var(--bg-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 540px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+
+.text{
+    color: var(--text-card);
+    text-align: left;
+    font-size: 40px;
+    margin-left: 20px;
+}
+.mes{
+    font-size: 15px;
+}
+
+.card-content-2{
+    margin-top: 10px;
+    background: var(--bg-text);
+    height: 640px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.card-content-2 h1 {
+    text-align: center;
+    color: var(--text-card);
+}
+
+.container-1  {
+    width: 100%;
+    max-width: 1200px;
+    height: 530px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container-1 .card {
+    width: 330px;
+    height: 530px;
+    border-radius: 8px;
+    background-color: var(--navbar-bg-color);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    padding-top: 1em;
+    text-align: center;
+    color: var(--text-card);
+    transition: all 0.25s;
+}
+
+.container-1 .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container-1 .card img {
+    width: 330px;
+    height: 220px;
+}
+
+.container-1 .card h4 {
+    font-weight: 400;
+}
+
+.container-1 .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card a {
+    text-decoration: none;
+}
+
+.button-gradient {
+    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+    background-size: 800% 400%;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    transition: all .5s ease-in-out;
+    animation: gradient 50s infinite cubic-bezier(.62, .28, .23, .99) both;
+   }
+   
+   .button-gradient:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+   }
+   
+   .button-gradient:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+   }
+   
+   @keyframes gradient {
+    0% {
+     background-position: 0% 50%;
+    }
+   
+    50% {
+     background-position: 100% 50%;
+    }
+   
+    100% {
+     background-position: 0% 50%;
+    }
+   }
+
+.contenido-plan {
+    margin-left: 2.5em;
+    text-align: left;
+}
+
+.card-content3 {
+    margin-top: 10px;
+    background-color: var(--bg-text);
+    height: 610px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+    padding: 2em;
+    color: var(--navbar-text-color-focus);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+a:link, a:visited,  a:hover, a:active {
+    color: var(--navbar-text-color-focus);
+    text-decoration: none;
+}
+
+.contacto h2{
+    text-decoration: underline;
+}
+
+.card-content3 h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+footer {
+   margin-top: 0.7em; 
+   bottom: 0;
+   height: 3em;
+   background: var(--navbar-bg-color);
+   text-align: center;
+   padding-top: 0.7em;
+ }
+
+  @media(max-width: 560px){
+      .nav-toggler{
+          display: flex;
+      }
+      .header .nav{
+          position: absolute;
+          left:0;
+          top:100%;
+          width: 100%;
+          background-color: var(--navbar-bg-color);
+          border-top: 1px solid rgba(255,255,255,0.2);
+          opacity:0;
+          visibility: hidden;
+      }
+      .header .nav ul li{
+          display: block;
+          margin:0;
+      }
+      .header #nav-check:checked ~ .nav{
+         opacity: 1;
+         visibility: visible;
+      }
+      .header #nav-check:focus ~ .nav-toggler{
+          box-shadow: 0 0 15px #000000;
+      }
+      .header #nav-check:checked ~ .nav-toggler span{
+          background-color: transparent;
+      }
+      .header #nav-check:checked ~ .nav-toggler span::before{
+          top:0;
+          transform: rotate(45deg);
+      }
+      .header #nav-check:checked ~ .nav-toggler span::after{
+          top:0;
+          transform: rotate(-45deg);
+      }
+      
+      .card-content{
+        margin-top: 10px;
+        background: var(--bg-text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        margin-right: 0.7em;
+        margin-left: 0.7em;
+        border-radius: 5px;
+        }
+        .pc-logo{
+            width: 80%;
+            margin-right: 1em;
+        }
+        .text{
+        color: var(--text-card);
+        text-align: left;
+        font-size: 1.1em;
+        margin-left: 1em;
+        }
+        .mes{
+        font-size: 0.5em;
+        }
+
+        .card-content-2{
+            margin-top: 10px;
+            background: var(--bg-text);
+            height: 1750px;
+            margin-right: 0.7em;
+            margin-left: 0.7em;
+            border-radius: 5px;
+        }
+
+        .card-content3 {
+            margin-top: 10px;
+            background: var(--bg-text);
+            margin-right: 0.7em;
+            margin-left: 0.7em;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            bottom: 0;
+            height: 4em;
+        }
+
+        .maps {
+            text-align: center;
+            margin-left: -3em;
+            
+        }
+  }
+
+  @media screen and (min-width: 560px) and (max-width: 1024px){
+    
+    footer {
+        bottom: 0;
+        height: 3em;
+    }
+    
+    .card-content-2{
+        margin-top: 10px;
+        background: var(--bg-text);
+        width: 44.5em;
+        height: 1750px;
+        margin-right: 0.7em;
+        margin-left: 1.9em;
+        padding: 1em;
+        border-radius: 5px;
+    }
+  }
+  
+  
